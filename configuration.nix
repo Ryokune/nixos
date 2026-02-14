@@ -75,19 +75,20 @@
   ];
 
   security.protectKernelImage = true;
-  nix.settings.use-xdg-base-directories = true; # just testing if false works
+  nix.settings.use-xdg-base-directories = true;
+
   # nix.gc = {
   #   automatic = true;
   #   dates = "daily";
   #   options = "--delete-older-than 10d";
   # };
 
-  systemd.user.services.nix-clean = {
-    description = "Clean user-level Nix generations";
-    serviceConfig.Type = "oneshot";
-    script = "${pkgs.nix}/bin/nix-collect-garbage --delete-older-than 30d";
-    startAt = "weekly";
-  };
+  #systemd.user.services.nix-clean = {
+  #  description = "Clean user-level Nix generations";
+  #  serviceConfig.Type = "oneshot";
+  #  script = "${pkgs.nix}/bin/nix-collect-garbage --delete-older-than 30d";
+  #  startAt = "weekly";
+  #};
 
   nixpkgs.config.allowUnfree = true;
   security.sudo.extraConfig = "Defaults lecture=never";
