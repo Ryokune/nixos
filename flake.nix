@@ -5,6 +5,9 @@
     # i.e. nixos-24.11
     # Use `nix flake update` to update the flake to the latest revision of the chosen release channel.
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    #nh.url = "github:nix-community/nh";
+    # optional but recommended:
+    #nh.inputs.nixpkgs.follows = "nixpkgs";
 
     disko = {
       url = "github:nix-community/disko/latest";
@@ -36,6 +39,7 @@
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+
       # hmUsers = {
       #   fish = [
       #     ./home/fish.nix

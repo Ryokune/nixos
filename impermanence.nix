@@ -72,6 +72,12 @@
       "/etc/nixos"
       "/voidbackup"
       "/var/lib/waydroid"
+      {
+        directory = "/var/lib/cachix-w";
+        user = "root";
+        group = "root";
+        mode = "0700";
+      }
     ];
     files = [
       "/etc/adjtime"
@@ -105,6 +111,11 @@
         "Games"
         ".local/state/nix/profiles"
         ".local/share/waydroid"
+        ".config/hayase/Service Worker"
+        ".config/hayase/Local Storage"
+        ".config/hayase/IndexedDB"
+        ".config/sops"
+
         {
           directory = ".gnupg";
           mode = "0700";
@@ -127,6 +138,39 @@
           file = ".config/htop/htoprc";
           method = "symlink";
         }
+        {
+          file = ".config/hayase/Network Persistent State";
+          method = "symlink";
+        }
+        {
+          file = ".config/hayase/settings.json";
+          method = "symlink";
+        }
+        {
+          file = ".config/hayase/Cookies";
+          # method = "symlink";
+        }
+        {
+          file = ".config/hayase/Cookies-journal";
+          # method = "symlink";
+        }
+        {
+          file = ".config/hayase/Trust Tokens";
+          # method = "symlink";
+        }
+        {
+          file = ".config/hayase/Trust Tokens-journal";
+          # method = "symlink";
+        }
+        {
+          file = ".config/hayase/TransportSecurity";
+          # method = "symlink";
+        }
+        {
+          file = ".config/hayase/Preferences";
+          # method = "symlink";
+        }
+
         # ".config/niri/config.kdl"
       ];
     };

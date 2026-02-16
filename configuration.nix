@@ -18,6 +18,7 @@
     ./tlp.nix
     ./system-programs.nix
     ./fonts.nix
+    ./cachix.nix
   ];
   zramSwap = {
     enable = true;
@@ -211,6 +212,7 @@
       "nix-command"
       "flakes"
     ];
+    trusted-users = [ "root" ];
     auto-optimise-store = true;
   };
 

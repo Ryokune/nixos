@@ -1,4 +1,9 @@
-{ pkgs, lib, ... }:
+{
+  pkgs,
+  lib,
+  inputs,
+  ...
+}:
 let
   custom-sddm-background = pkgs.runCommand "background-image" { } ''
     cp ${./assets/sddm-background.png} $out
@@ -43,6 +48,7 @@ in
     enable = true;
     clean.enable = true;
     clean.extraArgs = "--keep-since 4d --keep 3";
+    #package = inputs.nh.packages.${pkgs.system}.default;
   };
 
   programs.steam = {
