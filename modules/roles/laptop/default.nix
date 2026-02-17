@@ -21,6 +21,7 @@
         self.nixosModules.steam
         self.nixosModules.zsh
         self.nixosModules.waydroid
+        self.nixosModules.uwsm
         inputs.substratum.nixosModules.default
         {
           services.waydroid.enable = true;
