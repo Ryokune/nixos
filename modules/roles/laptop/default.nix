@@ -36,6 +36,7 @@
         priority = 100;
       };
 
+      services.fwupd.enable = true;
       hardware.enableRedistributableFirmware = true;
     };
 }
