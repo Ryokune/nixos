@@ -1,13 +1,20 @@
 { inputs, self, ... }:
 {
   flake.nixosConfigurations.siesta = inputs.nixpkgs.lib.nixosSystem {
+    # Unsure if this is properly needed here. But its here due to ./_modules/disko.nix
+    # I'll probably move disko.nix as a flake.nixosModules instead in the future.
+    # Or some sort of "partitioning scheme".
+    specialArgs = { inherit inputs; };
+
     system = "x86_64-linux";
     modules = [
       (inputs.import-tree ./_modules)
       self.users.fish
       self.nixosModules.laptop
+      inputs.hm-standalone-auto.nixosModules.hm-standalone-auto
       {
         # Host specific declarations
+        users.mutableUsers = false;
         networking.hostName = "siesta";
         time.timeZone = "Asia/Manila";
         i18n.defaultLocale = "en_US.UTF-8";

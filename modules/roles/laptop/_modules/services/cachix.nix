@@ -21,7 +21,8 @@
   };
 
   # FIXME: May have to "glue" this to work with impermanence. We'll see.
-  # Specific for my substratum packages repo. I'll probably move this somewhere else.
+  # Specific for my substratum packages repo. I'll probably move this somewhere else
+  # Probably will be within substratums flake.nix, but eh. Thats for the future
   systemd.services.cachix-watch = {
     description = "Cachix Watch Store Service";
     wants = [ "network-online.target" ];

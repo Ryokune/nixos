@@ -1,14 +1,14 @@
 { inputs, ... }:
 let
-  name = "fish";
+  name = "root";
 in
 {
   flake.nixosModules."users-${name}" =
     { pkgs, ... }:
     {
       users.users.${name} = {
-        isNormalUser = true;
-        shell = pkgs.zsh;
+        initialPassword = "nixos"; # fallback
+        hashedPasswordFile = "/etc/nixos/${name}PasswordFile";
       };
     };
 }

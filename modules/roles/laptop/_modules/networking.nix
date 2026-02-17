@@ -1,5 +1,13 @@
-{ self, pkgs, ... }:
 {
+  self,
+  config,
+  pkgs,
+  ...
+}:
+{
+  environment.sessionVariables = {
+    HOSTNAME = config.networking.hostName;
+  };
   networking = {
     firewall.enable = true;
     nftables.enable = true;

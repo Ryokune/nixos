@@ -19,17 +19,18 @@
         self.nixosModules.niri
         self.nixosModules.steam
         self.nixosModules.zsh
+        inputs.substratum.nixosModules.default
+        {
+          nixpkgs.overlays = [
+            inputs.substratum.overlays.default
+          ];
+        }
         (inputs.import-tree ./_modules)
       ];
 
       zramSwap = {
         enable = true;
         priority = 100;
-      };
-
-      environment.sessionVariables = {
-        # QT_QPA_PLATFORMTHEME = "qt6ct";
-        HOSTNAME = config.networking.hostName;
       };
 
       hardware.enableRedistributableFirmware = true;
