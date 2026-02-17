@@ -99,6 +99,7 @@
     uri = "http://connectivity-check.ubuntu.com/";
     interval = 30;
   };
+
   # environment.etc."NetworkManager/conf.d/00-connectivity.conf".text = ''
   #   [connectivity]
   #   enabled=true
@@ -106,6 +107,7 @@
   #   response=OK
   #   interval=30
   # '';
+
   networking.networkmanager.dispatcherScripts = [
     {
       source = pkgs.writeShellScript "20-waybar-nm" ''

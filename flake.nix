@@ -5,9 +5,6 @@
     # i.e. nixos-24.11
     # Use `nix flake update` to update the flake to the latest revision of the chosen release channel.
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    #nh.url = "github:nix-community/nh";
-    # optional but recommended:
-    #nh.inputs.nixpkgs.follows = "nixpkgs";
 
     disko = {
       url = "github:nix-community/disko/latest";
@@ -36,16 +33,6 @@
       hm-standalone-auto,
       ...
     }:
-    let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-
-      # hmUsers = {
-      #   fish = [
-      #     ./home/fish.nix
-      #   ];
-      # };
-    in
     {
       nixosConfigurations.siesta = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
@@ -58,7 +45,6 @@
 
           ./disko-config.nix
           ./configuration.nix
-          #         ./specialisations/cachy.nix
           ./specialisations/lts.nix
           ./services/waydroid.nix
 
@@ -70,6 +56,7 @@
           # }
         ];
       };
+
       # homeConfigurations = nixpkgs.lib.mapAttrs (
       #   username: mods:
       #   home-manager.lib.homeManagerConfiguration {
@@ -77,6 +64,7 @@
       #     modules = mods;
       #   }
       # ) hmUsers;
+
       # homeConfigurations.fish = home-manager.lib.homeManagerConfiguration {
       #   pkgs = nixpkgs.legacyPackages.x86_64-linux;
       #   modules = hmModules.fish;
