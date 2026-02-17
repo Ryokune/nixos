@@ -20,8 +20,10 @@
         self.nixosModules.niri
         self.nixosModules.steam
         self.nixosModules.zsh
+        self.nixosModules.waydroid
         inputs.substratum.nixosModules.default
         {
+          services.waydroid.enable = true;
           nixpkgs.overlays = [
             inputs.substratum.overlays.default
           ];
