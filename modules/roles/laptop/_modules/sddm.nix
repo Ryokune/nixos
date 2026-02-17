@@ -3,6 +3,7 @@
   services.displayManager = {
     enable = true;
     sddm = {
+      enable = true;
       wayland.enable = true;
       extraPackages = with pkgs; [
         substratum.sddm-astronaut-jp
@@ -14,4 +15,7 @@
       theme = "sddm-astronaut-theme";
     };
   };
+  environment.systemPackages = with pkgs; [
+    substratum.sddm-astronaut-jp
+  ];
 }

@@ -14,6 +14,10 @@
       inputs.hm-standalone-auto.nixosModules.hm-standalone-auto
       {
         # Host specific declarations
+        # TODO: Move this in the impermanence module.
+        security.sudo.extraConfig = "Defaults lecture=never";
+        services.journald.storage = "persistent";
+
         users.mutableUsers = false;
         networking.hostName = "siesta";
         time.timeZone = "Asia/Manila";

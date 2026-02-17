@@ -21,8 +21,10 @@
     hm-standalone-auto = {
       url = "path:/home/fish/Documents/projects/nix-flakes/hm_impermanence_standalone";
     };
+
     substratum = {
-      url = "git+file:///home/fish/Documents/projects/nix-flakes/substratum";
+      url = "github:Ryokune/substratum";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 

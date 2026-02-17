@@ -8,7 +8,7 @@ in
     {
       users.users.${name} = {
         initialPassword = "nixos"; # fallback
-        hashedPasswordFile = "/etc/nixos/${name}PasswordFile";
+        hashedPasswordFile = "/persist/etc/nixos/${name}PasswordFile";
       };
     };
 }
