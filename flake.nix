@@ -17,9 +17,8 @@
       inputs.home-manager.follows = "";
     };
 
-    # TODO: Move into its own gitub repo
-    hm-standalone-auto = {
-      url = "path:/home/fish/Documents/projects/nix-flakes/hm_impermanence_standalone";
+    rehomify = {
+      url = "github:Ryokune/rehomify";
     };
 
     substratum = {

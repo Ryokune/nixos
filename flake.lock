@@ -57,18 +57,6 @@
         "type": "github"
       }
     },
-    "hm-standalone-auto": {
-      "locked": {
-        "lastModified": 1770829162,
-        "narHash": "sha256-bx7agdk+9wShTmDP9hy+z31J5dy4toUYWsP/Ct8/ZyY=",
-        "path": "/home/fish/Documents/projects/nix-flakes/hm_impermanence_standalone",
-        "type": "path"
-      },
-      "original": {
-        "path": "/home/fish/Documents/projects/nix-flakes/hm_impermanence_standalone",
-        "type": "path"
-      }
-    },
     "impermanence": {
       "inputs": {
         "home-manager": [],
@@ -166,14 +154,26 @@
         "type": "github"
       }
     },
+    "rehomify": {
+      "locked": {
+        "lastModified": 1771377778,
+        "narHash": "sha256-g0oaPb3/TEFC2LJyjpLTsqOWaDw2kiCf2npD/PXZsjM=",
+        "path": "/home/fish/Documents/projects/nix-flakes/rehomify",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/fish/Documents/projects/nix-flakes/rehomify",
+        "type": "path"
+      }
+    },
     "root": {
       "inputs": {
         "disko": "disko",
         "flake-parts": "flake-parts",
-        "hm-standalone-auto": "hm-standalone-auto",
         "impermanence": "impermanence",
         "import-tree": "import-tree",
         "nixpkgs": "nixpkgs",
+        "rehomify": "rehomify",
         "substratum": "substratum"
       }
     },

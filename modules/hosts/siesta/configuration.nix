@@ -11,13 +11,13 @@
       (inputs.import-tree ./_modules)
       self.users.fish
       self.nixosModules.laptop
-      inputs.hm-standalone-auto.nixosModules.hm-standalone-auto
+      inputs.rehomify.nixosModules.rehomify
       {
         # Host specific declarations
         # TODO: Move this in the impermanence module.
+        rehomify.enable = true;
         security.sudo.extraConfig = "Defaults lecture=never";
         services.journald.storage = "persistent";
-
         users.mutableUsers = false;
         networking.hostName = "siesta";
         time.timeZone = "Asia/Manila";
