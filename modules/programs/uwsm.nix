@@ -17,7 +17,11 @@
           niri = lib.mkIf (config.programs.niri.enable) {
             prettyName = "Niri";
             comment = "Niri compositor managed by UWSM";
-            binPath = "/run/current-system/sw/bin/niri-session";
+            binPath = lib.getExe (
+              pkgs.writeShellScriptBin "niri-instance" ''
+                /run/current-system/sw/bin/niri --session
+              ''
+            );
           };
         };
       };
