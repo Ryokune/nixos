@@ -156,14 +156,17 @@
     },
     "rehomify": {
       "locked": {
-        "lastModified": 1771377778,
-        "narHash": "sha256-g0oaPb3/TEFC2LJyjpLTsqOWaDw2kiCf2npD/PXZsjM=",
-        "path": "/home/fish/Documents/projects/nix-flakes/rehomify",
-        "type": "path"
+        "lastModified": 1771378456,
+        "narHash": "sha256-h0YIlOZsH/re+fcphFy2+NRtojbyFwbP53m2OikWykQ=",
+        "owner": "Ryokune",
+        "repo": "rehomify",
+        "rev": "467cb1e2b58ffabff2754e245275bc33712078dc",
+        "type": "github"
       },
       "original": {
-        "path": "/home/fish/Documents/projects/nix-flakes/rehomify",
-        "type": "path"
+        "owner": "Ryokune",
+        "repo": "rehomify",
+        "type": "github"
       }
     },
     "root": {
