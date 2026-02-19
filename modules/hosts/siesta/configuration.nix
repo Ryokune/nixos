@@ -5,8 +5,6 @@
     # I'll probably move disko.nix as a flake.nixosModules instead in the future.
     # Or some sort of "partitioning scheme".
     specialArgs = { inherit inputs; };
-
-    system = "x86_64-linux";
     modules = [
       (inputs.import-tree ./_modules)
       self.users.fish
