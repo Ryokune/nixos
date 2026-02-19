@@ -1,7 +1,12 @@
-{ self, lib, ... }:
+{ self, ... }:
 {
   flake.nixosModules.uwsm =
-    { config, pkgs, ... }:
+    {
+      config,
+      pkgs,
+      lib,
+      ...
+    }:
     let
       uwsm = config.programs.uwsm;
     in

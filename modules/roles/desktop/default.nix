@@ -1,7 +1,7 @@
 { self, inputs, ... }:
 {
   flake.nixosModules.desktop =
-    { pkgs, environment, ... }:
+    { ... }:
     {
       imports = [
         self.nixosModules.dconf
