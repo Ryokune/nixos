@@ -10,6 +10,7 @@
     }:
     {
       imports = [
+        self.nixosModules.hayase
         self.nixosModules.dconf
         self.nixosModules.gamemode
         self.nixosModules.light

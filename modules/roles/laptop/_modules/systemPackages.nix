@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   # TODO: Move individual PKGS into their own files incase of needing to "wrap" them.
   # Just need to learn more about the nix ecosystem to figure out a good way to do this.

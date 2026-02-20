@@ -39,6 +39,7 @@
 
       imports = [
         (inputs.import-tree ./modules)
+        inputs.disko.flakeModules.default
       ];
       debug = true;
     };
