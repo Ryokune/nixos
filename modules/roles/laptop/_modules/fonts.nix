@@ -19,7 +19,6 @@
     useEmbeddedBitmaps = true;
   };
   fonts.packages = with pkgs; [
-    substratum.electroharmonix
     maple-mono.CN
     nerd-fonts.symbols-only
   ];

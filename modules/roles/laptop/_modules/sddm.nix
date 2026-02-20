@@ -18,4 +18,7 @@
   environment.systemPackages = with pkgs; [
     substratum.sddm-astronaut-jp
   ];
+  fonts.packages = with pkgs; [
+    substratum.electroharmonix
+  ];
 }
