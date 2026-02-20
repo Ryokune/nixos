@@ -189,11 +189,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1771501433,
-        "narHash": "sha256-8hVmLw35urvJwQ2+xEuhYbgukJwXpWYWftayklrXrp8=",
+        "lastModified": 1771553165,
+        "narHash": "sha256-MwRDzliy+mxkFAltWqdg6uX2fAcoNMXnt5z/C4vLRkM=",
         "owner": "Ryokune",
         "repo": "substratum",
-        "rev": "a0f72bb838b2604306df0d5a0671191c41f43031",
+        "rev": "96c875db2e49dc910bc63a02373c5f137a0f9536",
         "type": "github"
       },
       "original": {
