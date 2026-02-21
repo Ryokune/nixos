@@ -17,7 +17,10 @@
         #include disable-programs.inc
 
         ipc-namespace
-        private-home .config,.cache,Anime
+        private-home
+        whitelist ~/.config/hayase
+        whitelist ~/.cache/hayase
+        whitelist ~/Anime/Hayase
         private-dev
         private-tmp
         private-etc hosts,resolv.conf,ssl,ca-certificates
