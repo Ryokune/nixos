@@ -114,10 +114,10 @@
           file = ".config/htop/htoprc";
           method = "symlink";
         }
-        {
-          file = ".config/hayase/Network Persistent State";
-          method = "symlink";
-        }
+        # {
+        #   file = ".config/hayase/Network Persistent State";
+        #   method = "symlink";
+        # }
         {
           file = ".config/hayase/settings.json";
           method = "symlink";
