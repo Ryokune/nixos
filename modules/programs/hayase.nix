@@ -24,8 +24,7 @@
         private-dev
         private-tmp
         private-etc hosts,resolv.conf,ssl,ca-certificates
-        #seccomp
-        seccomp.drop ptrace,process_vm_readv,process_vm_writev,keyctl,add_key,request_key
+        seccomp !mount,!umount2,!pivot_root,!chroot,!membarrier
 
         noinput
         nogroups
