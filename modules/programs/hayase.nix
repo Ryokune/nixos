@@ -17,7 +17,7 @@
         #include disable-programs.inc
 
         ipc-namespace
-        private-home .config,.cache
+        private-home .config,.cache,Anime
         private-dev
         private-tmp
         private-etc hosts,resolv.conf,ssl,ca-certificates

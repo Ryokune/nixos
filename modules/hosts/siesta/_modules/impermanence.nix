@@ -91,7 +91,7 @@
         ".config/hayase/Local Storage"
         ".config/hayase/IndexedDB"
         ".config/sops"
-
+        "Anime"
         {
           directory = ".gnupg";
           mode = "0700";
