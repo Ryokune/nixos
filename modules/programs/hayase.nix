@@ -16,6 +16,8 @@
         include disable-exec.inc
         #include disable-programs.inc
         ipc-namespace
+        blacklist /voidbackup
+        blacklist /persist
         whitelist ~/.config/hayase
         whitelist ~/.cache/hayase
         whitelist ~/Anime/Hayase
