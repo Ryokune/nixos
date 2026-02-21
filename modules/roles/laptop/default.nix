@@ -20,6 +20,7 @@
         self.nixosModules.zsh
         self.nixosModules.waydroid
         self.nixosModules.uwsm
+        self.nixosModules.gamescope
         inputs.substratum.nixosModules.default
         {
           services.waydroid.enable = true;
