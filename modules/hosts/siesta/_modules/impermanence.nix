@@ -120,7 +120,7 @@
         # }
         {
           file = ".config/hayase/settings.json";
-          method = "symlink";
+          #method = "symlink";
         }
         {
           file = ".config/hayase/Cookies";
