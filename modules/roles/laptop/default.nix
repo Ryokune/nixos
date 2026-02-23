@@ -6,6 +6,7 @@
 {
   flake.nixosModules.laptop =
     {
+      pkgs,
       ...
     }:
     {
@@ -38,5 +39,9 @@
 
       services.fwupd.enable = true;
       hardware.enableRedistributableFirmware = true;
+      hardware.graphics.extraPackages = with pkgs; [
+        intel-media-driver
+        intel-ocl
+      ];
     };
 }
