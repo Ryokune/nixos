@@ -21,6 +21,7 @@
     useEmbeddedBitmaps = true;
   };
   fonts.packages = with pkgs; [
+    nanum
     maple-mono.CN
     nerd-fonts.symbols-only
   ];
