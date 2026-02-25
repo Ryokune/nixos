@@ -1,5 +1,7 @@
 { pkgs, ... }:
 {
+
+  fonts.enableDefaultPackages = false;
   fonts.fontconfig = {
     enable = true;
     defaultFonts = {
