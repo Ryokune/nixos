@@ -5,7 +5,15 @@
   fonts.fontconfig = {
     enable = true;
     defaultFonts = {
-      monospace = [ "Maple Mono CN" ];
+      monospace = [
+        "Symbols Nerd Font"
+        "Maple Mono NF CN"
+      ];
+      emoji = [
+        "EmojiOne Color"
+        "Noto Color Emoji"
+        "Noto Emoji"
+      ];
     };
     antialias = true;
     hinting = {
@@ -21,8 +29,8 @@
     useEmbeddedBitmaps = true;
   };
   fonts.packages = with pkgs; [
-    nanum
-    maple-mono.CN
     nerd-fonts.symbols-only
+    maple-mono.NF-CN
+    nanum
   ];
 }
