@@ -5,7 +5,7 @@
     {
       programs.gamescope = {
         enable = true;
-        capSysNice = true; # Recommended for performance
+        # capSysNice = true; # Recommended for performance
       };
       environment.systemPackages = with pkgs; [
         gamescope
