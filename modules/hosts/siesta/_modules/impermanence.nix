@@ -91,6 +91,7 @@
         ".config/hayase/Local Storage"
         ".config/hayase/IndexedDB"
         ".config/sops"
+        ".config/nvf"
         "Anime"
         {
           directory = ".gnupg";
