@@ -14,7 +14,7 @@
         self.nixosModules.hayase
         self.nixosModules.dconf
         self.nixosModules.gamemode
-        self.nixosModules.light
+        self.nixosModules.brightness
         self.nixosModules.nh
         self.nixosModules.niri
         self.nixosModules.steam

@@ -1,8 +1,10 @@
 { self, ... }:
 {
   flake.nixosModules.brightness =
-    { ... }:
+    { pkgs, ... }:
     {
-      programs.brightnessctl.enable = true;
+      environment.systemPackages = with pkgs; [
+        brightnessctl
+      ];
     };
 }
