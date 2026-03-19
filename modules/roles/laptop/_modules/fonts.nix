@@ -28,8 +28,13 @@
     allowBitmaps = true;
     useEmbeddedBitmaps = true;
   };
+
   fonts.packages = with pkgs; [
     nerd-fonts.symbols-only
+    noto-fonts
+    freefont_ttf
+    gyre-fonts
+    liberation_ttf
     maple-mono.NF-CN
     nanum
   ];
