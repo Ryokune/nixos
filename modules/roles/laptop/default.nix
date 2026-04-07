@@ -11,6 +11,7 @@
     }:
     {
       imports = [
+        self.nixosModules.otd
         self.nixosModules.hayase
         self.nixosModules.dconf
         self.nixosModules.gamemode
