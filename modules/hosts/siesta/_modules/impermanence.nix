@@ -87,6 +87,7 @@
         "Games"
         ".local/state/nix/profiles"
         ".local/share/waydroid"
+        ".config/Ryujinx"
         ".config/hayase/Service Worker"
         ".config/hayase/Local Storage"
         ".config/hayase/IndexedDB"
