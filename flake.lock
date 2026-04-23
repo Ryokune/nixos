@@ -110,11 +110,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1775423009,
-        "narHash": "sha256-vPKLpjhIVWdDrfiUM8atW6YkIggCEKdSAlJPzzhkQlw=",
+        "lastModified": 1776548001,
+        "narHash": "sha256-ZSK0NL4a1BwVbbTBoSnWgbJy9HeZFXLYQizjb2DPF24=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "68d8aa3d661f0e6bd5862291b5bb263b2a6595c9",
+        "rev": "b12141ef619e0a9c1c84dc8c684040326f27cdcc",
         "type": "github"
       },
       "original": {
@@ -156,11 +156,11 @@
     },
     "rehomify": {
       "locked": {
-        "lastModified": 1771378456,
-        "narHash": "sha256-h0YIlOZsH/re+fcphFy2+NRtojbyFwbP53m2OikWykQ=",
+        "lastModified": 1776934479,
+        "narHash": "sha256-J5CGnzfin6DK4/hxiaRLPSYk5De9+HmJ6ACWM3FQGJc=",
         "owner": "Ryokune",
         "repo": "rehomify",
-        "rev": "467cb1e2b58ffabff2754e245275bc33712078dc",
+        "rev": "01b127f8080df797df7aaa44012ea9b522eaf6d5",
         "type": "github"
       },
       "original": {
@@ -189,11 +189,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1775549683,
-        "narHash": "sha256-+RWCkn5Jj+pWWdVbOKB4CYb6knLuPlwoNMq7Ry7P9W4=",
+        "lastModified": 1776764557,
+        "narHash": "sha256-6E2arpl5QaavsSNxVSfqnpCL58PKIShs+OmjOHgOzP4=",
         "owner": "Ryokune",
         "repo": "substratum",
-        "rev": "b5573f34d29d1ef67ab46b61a7d62d2b2b8aa887",
+        "rev": "d0575b6c4082c9e70b5429ceef965aed79b0d154",
         "type": "github"
       },
       "original": {

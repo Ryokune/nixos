@@ -13,6 +13,7 @@
       {
         # Host specific declarations
         # TODO: Move this in the impermanence module.
+        powerManagement.cpuFreqGovernor = "performance";
         rehomify.enable = true;
         security.sudo.extraConfig = "Defaults lecture=never";
         services.journald.storage = "persistent";

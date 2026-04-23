@@ -9,23 +9,63 @@
   ];
   # This assumes that the host is using an encrypted BTRFS drive.
   # TODO: Make this work for ZFS, BTRFS, ext4, tmpfs root, etc.., and separate a lot of stuff.
-  boot.initrd.postResumeCommands = pkgs.lib.mkAfter ''
-    mkdir -p /mnt
-    mount /dev/mapper/cryptroot /mnt
-    delete_subvolume_recursively() {
-      IFS=$'\n'
-      for i in $(btrfs subvolume list -o "$1" | cut -f 9- -d ' '); do
-        delete_subvolume_recursively "/mnt/$i"
-      done
-      echo "Deleting subvolume $1"
-      btrfs subvolume delete "$1"
-    }
-    delete_subvolume_recursively /mnt/@
+  boot.initrd.systemd = {
+    services.impermance-btrfs-root = {
+      description = "BTRFS Impermanent Root Setup";
+      # Specify dependencies explicitly
+      unitConfig.DefaultDependencies = false;
+      # The script needs to run to completion before this service is done
+      serviceConfig = {
+        Type = "oneshot";
+        # NOTE: to be able to see errors in your script do this
+        # StandardOutput = "journal+console";
+        # StandardError = "journal+console";
+      };
+      # This service is required for boot to succeed
+      requiredBy = [ "initrd.target" ];
+      # Should complete before any file systems are mounted
+      before = [ "sysroot.mount" ];
 
-    echo "Creating new root subvolume"
-    btrfs subvolume create /mnt/@
-    umount /mnt
-  '';
+      # Wait until the root device is available
+      # If you're altering a different device, specify its device unit explicitly.
+      # see: systemd-escape(1)
+      requires = [ "initrd-root-device.target" ];
+      after = [
+        "initrd-root-device.target"
+        # Allow hibernation to resume before trying to alter any data
+        "local-fs-pre.target"
+      ];
+
+      # The body of the script. Make your changes to data here
+      script = ''
+        mkdir -p /mnt
+        mount /dev/mapper/cryptroot /mnt
+        delete_subvolume_recursively() {
+          IFS=$'\n'
+          for i in $(btrfs subvolume list -o "$1" | cut -f 9- -d ' '); do
+            delete_subvolume_recursively "/mnt/$i"
+          done
+          echo "Deleting subvolume $1"
+          btrfs subvolume delete "$1"
+        }
+        delete_subvolume_recursively /mnt/@
+
+        echo "Creating new root subvolume"
+        btrfs subvolume create /mnt/@
+        umount /mnt
+      '';
+    };
+    extraBin = {
+      # "mkfs.ext4" = "${pkgs.e2fsprogs}/bin/mkfs.ext4";
+      "mkdir" = "${pkgs.coreutils}/bin/mkdir";
+      "date" = "${pkgs.coreutils}/bin/date";
+      "stat" = "${pkgs.coreutils}/bin/stat";
+      "mv" = "${pkgs.coreutils}/bin/mv";
+      "find" = "${pkgs.findutils}/bin/find";
+      "btrfs" = "${pkgs.btrfs-progs}/bin/btrfs";
+      # mount & umount already exist
+    }; # NOTE: path = [...]; doesnt work for initrd, use full paths in your script or extraBin
+  };
   fileSystems = {
     "/persist" = {
       neededForBoot = true;
@@ -93,6 +133,7 @@
         ".config/hayase/IndexedDB"
         ".config/sops"
         ".config/nvf"
+        ".config/OpenTabletDriver"
         "Anime"
         {
           directory = ".gnupg";
@@ -148,6 +189,7 @@
           file = ".config/hayase/Preferences";
           # method = "symlink";
         }
+        ".config/kritarc"
 
         # ".config/niri/config.kdl"
       ];
