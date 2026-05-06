@@ -106,6 +106,7 @@
         "Videos"
         "Documents"
         ".zen"
+        ".local/state/wireplumber"
         # TODO: Only add needed impermanence for profiles, passwords, cookies, etc instead of the whole file.
         ".config/mozilla/firefox"
         ".mozilla/firefox" # if installed via home manager
