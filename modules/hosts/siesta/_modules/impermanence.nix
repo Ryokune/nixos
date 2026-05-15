@@ -85,6 +85,7 @@
       "/etc/nixos"
       "/voidbackup"
       "/var/lib/waydroid"
+      "/var/lib/tailscale"
       {
         directory = "/var/lib/cachix-w";
         user = "root";
@@ -112,6 +113,7 @@
         ".mozilla/firefox" # if installed via home manager
         ".config/vesktop"
         ".local/share/lutris"
+        ".config/Moonlight Game Streaming Project"
         # ".config/lutris"
         ".cache/lutris"
         # ".config/waybar"
@@ -126,7 +128,7 @@
         ".local/share/Steam"
         ".local/share/umu"
         "Games"
-        ".local/state/nix/profiles"
+        #".local/state/nix/profiles"
         ".local/share/waydroid"
         ".config/Ryujinx"
         ".config/hayase/Service Worker"
