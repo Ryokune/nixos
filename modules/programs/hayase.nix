@@ -23,7 +23,7 @@
         whitelist ~/Anime/Hayase
         private-dev
         private-tmp
-        private-etc hosts,resolv.conf,ssl,ca-certificates
+        private-etc hosts,resolv.conf,ssl,ca-certificates,localtime,zoneinfo
         seccomp !mount,!umount2,!pivot_root,!chroot,!membarrier
 
         noinput
