@@ -16,6 +16,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "";
     };
+    preservation = {
+      url = "github:nix-community/preservation";
+    };
 
     rehomify = {
       url = "github:Ryokune/rehomify";
