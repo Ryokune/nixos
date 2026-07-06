@@ -144,6 +144,7 @@
           "Games"
           #".local/state/nix/profiles"
           ".local/share/waydroid"
+          ".local/share/dynamicwidget"
           ".config/Ryujinx"
           ".config/hayase/Service Worker"
           ".config/hayase/Local Storage"
