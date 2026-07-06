@@ -26,15 +26,9 @@
         inputs.substratum.nixosModules.default
         {
           services.waydroid.enable = true;
+          services.tailscale.enable = true;
           nixpkgs.overlays = [
             inputs.substratum.overlays.default
-
-            # Temporary opendlap fix for bottles/lutris
-            (_: prev: {
-              openldap = prev.openldap.overrideAttrs {
-                doCheck = !prev.stdenv.hostPlatform.isi686;
-              };
-            })
           ];
 
         }
