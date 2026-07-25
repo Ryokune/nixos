@@ -152,6 +152,8 @@
           ".config/sops"
           ".config/nvf"
           ".config/OpenTabletDriver"
+          ".cargo"
+          ".local/share/direnv/allow"
           "Anime"
           {
             directory = ".gnupg";
