@@ -21,6 +21,22 @@
         "type": "github"
       }
     },
+    "flake-compat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1777699697,
+        "narHash": "sha256-Eg9b/rq/ECYwNwEXs5i9wHyhxNI0JrYx2srdI2uZMaQ=",
+        "ref": "refs/heads/main",
+        "rev": "382052b74656a369c5408822af3f2501e9b1af81",
+        "revCount": 94,
+        "type": "git",
+        "url": "https://git.lix.systems/lix-project/flake-compat.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.lix.systems/lix-project/flake-compat.git"
+      }
+    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": "nixpkgs-lib"
@@ -80,11 +96,11 @@
     },
     "import-tree": {
       "locked": {
-        "lastModified": 1778781969,
-        "narHash": "sha256-Jjuz5CmSkur8KvLDoGa+vylEp+RkQtv4mt/qcMznpH0=",
+        "lastModified": 1784254960,
+        "narHash": "sha256-iI88R3wHz8wTKQb5orvpc51L/Xr64AJyxid/0MKa/b8=",
         "owner": "vic",
         "repo": "import-tree",
-        "rev": "d321337efd0f23a9eb14a42adb7b2c29313ab274",
+        "rev": "4ebb10ae17d5f1ad366e7aef5b92cb8eecf24f69",
         "type": "github"
       },
       "original": {
@@ -108,13 +124,28 @@
         "type": "github"
       }
     },
+    "mnw": {
+      "locked": {
+        "lastModified": 1780772958,
+        "narHash": "sha256-VKKe8r4pwCGWZ3Yr9CPN129R4S3CKLSrlYqdYz3vKpM=",
+        "owner": "Gerg-L",
+        "repo": "mnw",
+        "rev": "0871dbf63a53610c95db04439ed8ea4d6ec9c160",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Gerg-L",
+        "repo": "mnw",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1784007870,
-        "narHash": "sha256-djcLt/JJphyNt4eDY9XTly+/WbCK5lqWq9lSgCmJkkQ=",
+        "lastModified": 1784497964,
+        "narHash": "sha256-vlHUuqAcbcH2RKmHbPiuQzbv1pnzzavXnI62RD0bqCU=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "18b9261cb3294b6d2a06d03f96872827b8fe2698",
+        "rev": "241313f4e8e508cb9b13278c2b0fa25b9ca27163",
         "type": "github"
       },
       "original": {
@@ -154,6 +185,29 @@
         "type": "github"
       }
     },
+    "nvf": {
+      "inputs": {
+        "flake-compat": "flake-compat",
+        "mnw": "mnw",
+        "nixpkgs": [
+          "substratum",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1784320861,
+        "narHash": "sha256-sPUghbl8wMmESus7KvsmHIUEyD2mi13/xu7/u2H5SZU=",
+        "owner": "NotAShelf",
+        "repo": "nvf",
+        "rev": "43fdcbf2e00290479d3f9b97b7f61edd08c4e584",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NotAShelf",
+        "repo": "nvf",
+        "type": "github"
+      }
+    },
     "preservation": {
       "locked": {
         "lastModified": 1757436102,
@@ -171,11 +225,11 @@
     },
     "rehomify": {
       "locked": {
-        "lastModified": 1781744092,
-        "narHash": "sha256-oF/xkNE1opASb9syV36QzGLX2fPGYQei/wMH8OmZ8pY=",
+        "lastModified": 1784598881,
+        "narHash": "sha256-fBe/Q6/616W0JgJB7GbNzc84/act9XwAq/goIUcg1jk=",
         "owner": "Ryokune",
         "repo": "rehomify",
-        "rev": "075e34f76545c3f224161280575237e1cfcf7eb4",
+        "rev": "0885d21d4653f4e514e1efe7d8fe9c1c7a1f96cd",
         "type": "github"
       },
       "original": {
@@ -202,14 +256,15 @@
         "import-tree": "import-tree_2",
         "nixpkgs": [
           "nixpkgs"
-        ]
+        ],
+        "nvf": "nvf"
       },
       "locked": {
-        "lastModified": 1782965186,
-        "narHash": "sha256-lXgFY9r1U+C1FpflG8BuD8NAsgptfE+BeZnbyI/jBDw=",
+        "lastModified": 1784358075,
+        "narHash": "sha256-ROQKfsb3h3Z21qSoTdFI0NoDw1kCy5lMO3OBUbVlZVw=",
         "owner": "Ryokune",
         "repo": "substratum",
-        "rev": "01b76d3b114efb3bdaffa2c898e57e9aae9d1437",
+        "rev": "5573ca208ffbad90652aef75ebba60e10ba2f528",
         "type": "github"
       },
       "original": {
