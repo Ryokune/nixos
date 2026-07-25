@@ -6,7 +6,7 @@
       programs.nh = {
         enable = true;
         clean.enable = true;
-        clean.extraArgs = "--keep 3 --keep-since 7d";
+        clean.extraArgs = "--keep 3 --keep-since 7d --keep-one";
       };
       environment.sessionVariables = {
         NH_OS_FLAKE = "/etc/nixos";
